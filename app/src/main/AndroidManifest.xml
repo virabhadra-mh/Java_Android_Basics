@@ -14,7 +14,7 @@
         android:theme="@style/Theme.AndroidJavaBasics"
         tools:targetApi="31">
         <activity
-            android:name=".ResultActivity"
+            android:name=".service.ResultActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -25,6 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <service android:name=".service.IntentServiceCustom" android:exported="false"
+            tools:ignore="Instantiatable" />
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 
 import com.example.androidjavabasics.R;
 
@@ -17,7 +18,11 @@ public class ResultActivity extends AppCompatActivity implements ResultReceiverC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        registerService();
+        try {
+            registerService();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     /*
@@ -40,6 +45,11 @@ public class ResultActivity extends AppCompatActivity implements ResultReceiverC
         /*
          * Step 3: Handle the results from the intent service here!
          * */
+
+       String  myName=resultData.getString("myName");
+       String  myName33=resultData.getString("myName");
+
+        Log.d("RRRRRREEESS-> ",""+myName);
     }
 
 }

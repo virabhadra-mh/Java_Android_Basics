@@ -13,6 +13,11 @@ public class IntentServiceCustom extends IntentService {
     public static final int STATUS_FINISHED = 1;
     public static final int STATUS_ERROR = 2;
 
+
+    public IntentServiceCustom() {
+        super("");
+    }
+
     /**
      * @param name
      * @deprecated
@@ -36,6 +41,7 @@ public class IntentServiceCustom extends IntentService {
          * we can pass the status of the service back to the activity using the resultReceiver
          *  */
         Bundle b = new Bundle();
+        b.putString("myName","Virabhadrappa");
         receiver.send(STATUS_FINISHED, b);
     }
 }
