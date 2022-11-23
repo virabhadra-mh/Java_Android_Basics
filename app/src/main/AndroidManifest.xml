@@ -14,7 +14,7 @@
         android:theme="@style/Theme.AndroidJavaBasics"
         tools:targetApi="31">
         <activity
-            android:name=".service.ResultActivity"
+            android:name=".service.ActivityIntentService"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

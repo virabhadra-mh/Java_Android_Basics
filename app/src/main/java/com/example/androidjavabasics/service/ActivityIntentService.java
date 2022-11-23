@@ -9,7 +9,7 @@ import android.util.Log;
 
 import com.example.androidjavabasics.R;
 
-public class ResultActivity extends AppCompatActivity implements ResultReceiverCustom.ReceiverInterface {
+public class ActivityIntentService extends AppCompatActivity implements ResultReceiverCustom.ReceiverInterface {
 
     private ResultReceiverCustom resultReceiver;
 
@@ -34,7 +34,7 @@ public class ResultActivity extends AppCompatActivity implements ResultReceiverC
         /*
          * Step 2: We pass the ResultReceiver via the intent to the intent service
          * */
-        resultReceiver = new ResultReceiverCustom(new Handler(), ResultActivity.this);
+        resultReceiver = new ResultReceiverCustom(new Handler(), ActivityIntentService.this);
         intent.putExtra("receiver", resultReceiver);
         startService(intent);
     }

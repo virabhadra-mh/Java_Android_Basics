@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.androidjavabasics.service.ResultActivity;
+import com.example.androidjavabasics.service.ActivityIntentService;
 
 public class MainActivity extends AppCompatActivity {
     Button src_intentservice;
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         src_intentservice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in=new Intent(MainActivity.this, ResultActivity.class);
+                Intent in=new Intent(MainActivity.this, ActivityIntentService.class);
                 startActivity(in);
             }
         });
